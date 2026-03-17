@@ -16,21 +16,22 @@ Extensive experiments on **Flickr30K** and **MSCOCO** demonstrate that HCER sign
 
 ## Framework
 
-项目遵循“分解-分层-验证”范式，主要包含以下核心步骤：
+The project follows a **"Decomposition-Hierarchy-Verification"** paradigm, which consists of the following core steps:
 
-![HCER Framework Architecture](此处放置你的架构图文件路径，例如：images/framework.png)
-*图 1: HCER 整体架构图。*
+![HCER Framework Architecture](framework.png)
 
-- **Semantic Decomposition**: 利用结构化提示词将图像转化为多视角（Multi-view）原子级语义。
-- **Hierarchical Contextual Embeddings (HCE)**: 解决长描述中的语义稀释问题，融合局部与全局特征。
-- **Reasoning-based Re-ranking**: 利用 MLLM 对 Top-K 候选集进行显式的逻辑一致性推理验证。
+*Fig. 1: Overall architecture of the HCER framework.*
+
+- **Semantic Decomposition**: Utilizes structured prompts to transform images into multi-view, atomic-level semantic descriptions.
+- **Hierarchical Contextual Embeddings (HCE)**: Mitigates semantic dilution in long descriptive sequences by effectively fusing local discriminative power with global contextual coherence.
+- **Reasoning-based Re-ranking**: Leverages Multimodal Large Language Models (MLLMs) to perform explicit logical consistency verification on Top-K candidates.
 
 ---
 
-## 实验结果 (Experimental Results)
+## Experimental Results
 
-### 1. Flickr30K 性能对比
-在 Flickr30K 数据集上，HCER 在多项指标（尤其是 R@1）上达到了当前最优水平。
+### 1. Performance Comparison on Flickr30K
+On the Flickr30K dataset, HCER achieves state-of-the-art performance across multiple metrics, particularly in R@1.
 
 | Method | I2T R@1 | I2T R@5 | I2T R@10 | T2I R@1 | T2I R@5 | T2I R@10 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -44,8 +45,8 @@ Extensive experiments on **Flickr30K** and **MSCOCO** demonstrate that HCER sign
 | LexiCLIP (2025)* | 92.9 | - | 97.1 | 79.2 | - | 97.4 |
 | **HCER (Ours)** | **96.5** | **99.0** | **99.7** | **83.0** | 91.7 | 95.3 |
 
-### 2. MSCOCO 性能对比
-在 MSCOCO (5K test set) 上，HCER 同样展现了极强的零样本检索能力。
+### 2. Performance Comparison on MSCOCO
+On the MSCOCO (5K test set), HCER demonstrates superior zero-shot retrieval capabilities.
 
 | Method | I2T R@1 | I2T R@5 | I2T R@10 | T2I R@1 | T2I R@5 | T2I R@10 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -63,16 +64,6 @@ Extensive experiments on **Flickr30K** and **MSCOCO** demonstrate that HCER sign
 
 ---
 
-## 可视化 (Visualization)
-
-![Similarity Matrix](此处放置图14或矩阵图路径)
-*图 2: HCE 编码嵌入与文本库之间的余弦相似度矩阵。*
-
-![Candidate Selection](此处放置Table IX/X对应的可视化效果图路径)
-*图 3: 检索示例及推理重排前后的对比。*
-
----
-
 ## 开源声明 (Availability)
 
-**The source code will be made publicly available upon the acceptance of the paper.** (代码将在论文被接收后正式开源。)
+**The source code will be made publicly available upon the acceptance of the paper.**
