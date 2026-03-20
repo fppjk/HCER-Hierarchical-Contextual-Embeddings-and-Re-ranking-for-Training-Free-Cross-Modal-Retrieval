@@ -1,5 +1,9 @@
 # HCER: Hierarchical Contextual Embeddings and Re-ranking for Training Free Cross-Modal Retrieval
 HCER: Hierarchical Contextual Embeddings and Re-ranking for Training-Free Cross-Modal Retrieval
+---
+## Availability
+
+**The source code will be made publicly available upon the acceptance of the paper.**
 
 ## Abstract
 
@@ -51,6 +55,4 @@ On the MSCOCO (5K test set), HCER demonstrates superior zero-shot retrieval capa
 
 ---
 
-## Availability
 
-**The source code will be made publicly available upon the acceptance of the paper.**
